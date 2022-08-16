@@ -1,0 +1,45 @@
+<!DOCTYPE html>   
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Registration</title>
+<link rel="stylesheet" href="style.css">
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="#">
+    <h1 style="color: white">ET</h1>
+  </a>
+  
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Home</a>
+    </li>
+  </ul>
+</nav>
+<div class="container">
+<div class="inner">
+<div class="form">
+<h1>ET</h1>
+<form th:action="@{/registersubmit}" method="POST">
+	 <input type="text" placeholder="Name" name="name"><br>
+     <input type="email" placeholder="Email" name="email"><br>
+     <input type="password" placeholder="Password" name="password"><br>
+     <input type="submit" value="Register">
+   </form>
+</div>
+<div class="signup">
+<h1>Expense Tracker<br><p>Already have an account?<br><br><a href="/login">login</a></p></h1>
+</div>
+</div>
+</div>
+</body>
+</html>

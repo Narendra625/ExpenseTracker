@@ -1,0 +1,74 @@
+
+.container{
+	
+	height:90vh;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+.inner{
+	display:flex;
+	height:400px;
+	width:575px;
+	align-items: center;
+	
+	border-radius:10px;
+	-webkit-box-shadow: -1px 2px 5px 3px rgba(0,0,0,0.48); 
+box-shadow: -1px 2px 5px 3px rgba(0,0,0,0.48);
+	
+}
+
+h1{
+	text-align: center;
+	font-family:Palatino Linotype;
+}
+
+input[type=email],input[type=password],input[type=submit]{
+	margin: 10px;
+	height:40px;
+	width:260;
+	background-color: #eee;
+	border: none;
+	
+}
+input[type=submit]{
+	width:75px;
+	margin-left: 100px;
+	background-color:#FF4B2B;
+	border-radius: 20px;
+	color:#fff;
+}
+
+input:hover[type=submit]{
+	width:75px;
+	margin-left: 100px;
+	background-color:#fff;
+	border-radius: 20px;
+	color:#FF4B2B;
+}
+
+.signup{
+	
+	width:375px;
+	height:401px;
+	border-radius: 0px 10px 10px 0px;
+	background: #FF416C;
+	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+	background: linear-gradient(to right, #FF4B2B, #FF416C);
+}
+.signup h1{
+	margin-top:125px;
+	text-align: center;
+	color:#fff;
+	
+}
+
+.signup h1 a{
+	text-decoration: none;
+	font-size:20px;
+	color: #fff;
+	border: 2px solid #fff;
+	padding:10px;
+	border-radius:20px;
+}

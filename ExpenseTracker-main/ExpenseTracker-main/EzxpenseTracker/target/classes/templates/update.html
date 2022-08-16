@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>ET</title>
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="#">
+   <h1>ET</h1>
+  </a>
+  
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" th:href = "@{/home}">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" th:href = "@{/Feedback}">Feedback</a>
+    </li>
+  </ul>
+</nav>
+<br>
+	<div class="container" style="text-align: center;">
+		<h1 style="text-align:center">Expense Tracker</h1>
+		<hr>
+		<h2>Update Expenses</h2><br>
+
+		<form action="#" th:action="@{/expensesubmit}" th:object="${expenses}"
+			method="POST" >
+			
+			<!-- Add hidden form field to handle update -->
+			<input type="hidden" style="margin-left:35%;" th:field="*{id}" />
+			
+			<input type="text" th:field="*{email}" style="margin-left:35%;" class="form-control mb-4 col-4">
+				
+				<input type="text" th:field="*{description}" style="margin-left:35%;" class="form-control mb-4 col-4">
+				
+				<input type="text" th:field="*{expensedate}" style="margin-left:35%;" class="form-control mb-4 col-4">
+				
+				<button type="submit" class="btn btn-info col-2"> Update Expense</button>
+		</form>
+		
+		<hr>
+		
+		<a th:href = "@{/History}"> Back to Expense List</a>
+	</div>
+</body>
+</html>

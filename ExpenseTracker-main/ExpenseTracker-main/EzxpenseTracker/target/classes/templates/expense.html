@@ -1,0 +1,75 @@
+<!DOCTYPE html>   
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>ET-Make expense</title>
+<link rel="stylesheet" href="makeexpense.css">
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="#" style="border:none;">
+    <h1 style="color: white;border:none;">ET</h1>
+  </a>
+  
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" th:href="@{/home}"  style="border:none;">Home</a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" style="border: none;" th:href = "@{/Feedback}">Feedback</a>
+    </li>
+   
+  </ul>
+</nav>
+
+
+  <br>
+<div>
+ <br>
+<h1 th:text="'Your Current amount is:'+${amount}"></h1>
+ <br>
+  <br>
+<form th:action="@{/expensesubmit}" method="POST">
+<label for="expense">Type of expense : </label>
+<select id="expense" type="text" name="description">
+    <option value="groceries">Groceries</option>
+    <option value="monthlybill">Monthly Bill</option> 
+    <option value="luxuries">Luxuries</option>
+    <option value="others">others</option>
+  </select><br> <br>
+  <div class="input">
+  <label for="expenseamount">Expense Amount :  </label>
+  <input type="number" style="border:1 solid black" value="0" name="expenseamount" min="10" max="1000000"><br><br>
+  </div>
+  <div class="input">
+  <label for="date">Date of expense : </label>
+  <input type="date" name="expensedate">
+  <br><br>
+   <input type="submit" class="btn btn-info" value="Submit"><br><br>
+  <a class="btn btn-dark" role="button" th:href = "@{/home}" style="margin-left: 0%">Home</a>
+  </div>
+
+</form>
+<footer>&copy ET</footer>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<marquee>
+Spring boot expense tracker
+</marquee>
+</body>
+
+</html>
