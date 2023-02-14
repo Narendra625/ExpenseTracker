@@ -4,10 +4,10 @@
 <h2 style="color:#e600ac;">Website Link : </h2> <p>https://quiet-plateau-64131.herokuapp.com/ </p><br>
 <h2>Document Link : </h2> <p>https://docs.google.com/document/d/1yqfFhyWNKGXjCBXUyZcKtm3mVFse3FBVAoNAF6v7LNE/edit?usp=sharing </p>
 <h2>Team members :</h2><br>
-1)SaiTeja<br>
+1)Narendra Kumar<br>
 2)Janagam Mrunal Reddy<br>
 3)Nithish D<br>
-4)S. Narendra Kumar<br>
+4)Sai Teja<br>
 <br>
 #Expense Tracker Using JAVA SpringBoot 
 
